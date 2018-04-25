@@ -14,6 +14,7 @@ public class RoachMotel {
     //private constructor
     private RoachMotel(){};
     
+    //returns this one and only instance of RoachMotel
     public synchronized static RoachMotel getInstance(){
         if(uniqueInstance == null){
             uniqueInstance = new RoachMotel();
