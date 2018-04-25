@@ -1,5 +1,8 @@
 /*
  * Programmers: Eric Palma, Justin Do, Juan
+ * Class Name: Main
+ * Input: 
+ * Output:
  */
 package designpatternsproject;
 
