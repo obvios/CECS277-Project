@@ -1,5 +1,5 @@
 /*
- * Programmers: Eric Palma, Justin Do, Juan
+ * Programmers: Eric Palma, Justin Do, Juan, Jeffrey
  * Class Name: Main
  * Input: 
  * Output:
