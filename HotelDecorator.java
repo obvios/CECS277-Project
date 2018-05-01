@@ -1,4 +1,4 @@
 
-public class HotelDecorator {
-
+public class HotelDecorator extends Amnemities{
+	public abstract String getDescription();
 }
