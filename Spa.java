@@ -1,3 +1,4 @@
+package designpatternsproject;
 
 public class Spa extends Amnemities{
 	public static final COST = 20.00;
