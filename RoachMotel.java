@@ -22,4 +22,9 @@ public class RoachMotel {
         }
         return uniqueInstance;
     }
+    
+    //called when a roach colony gets a room
+    void checkIn(){
+        initCapacityOfRooms--;
+    }
 }
