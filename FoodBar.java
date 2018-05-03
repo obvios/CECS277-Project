@@ -1,7 +1,7 @@
 package designpatternsproject;
 
 public class FoodBar extends Amnemities{
-	public static final COST = 10.00;
+	public static final double COST = 10.00;
 	
 	public FoodBar() {
 		description = "Delicious Food Bar";
