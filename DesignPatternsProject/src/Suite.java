@@ -1,4 +1,3 @@
-package designpatternsproject;
 
 public class Suite extends Room{
 	public static final double COST = 100.00;
