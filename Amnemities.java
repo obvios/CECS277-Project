@@ -1,4 +1,4 @@
-package designpatternsproject;
+package DesignPatternsProject;
 
 public abstract class Amnemities {
 	protected String description;
