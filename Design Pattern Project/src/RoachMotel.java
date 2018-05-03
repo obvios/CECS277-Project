@@ -17,10 +17,12 @@ public class RoachMotel implements Subject {
     private boolean noVacancySign;             //true when there are no vacant rooms
     
     private Queue<Observer> waitlist;
-    
+    private LinkedList<RoachColony> rooms;
+	
     //private constructor
     private RoachMotel(){
         waitlist = new LinkedList<Observer>();
+	rooms = new LinkedList<RoachColony>();
         noVacancySign = false;
     };
     
@@ -55,14 +57,15 @@ public class RoachMotel implements Subject {
 
 	/* removes an observer */	
 	public void removeObserver( Observer o ){
-        waitlist.poll();
-        System.out.println("Roach colony leaving waitlist and entering hotel.");
+        rooms.add(waitlist.poll());
+	checkIn();
+        System.out.println("Roach colony leaving waitlist.");
         
     }
 
 	/* notifes all registered observers when its state changes */	
 	public void notifyObservers(){
         for (Observer roachColony : observers)
-			roachColony.update(noVacancySign);
+		roachColony.update(noVacancySign);
     }
 }
