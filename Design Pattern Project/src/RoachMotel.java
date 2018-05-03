@@ -2,8 +2,6 @@
  * Class Name: RoachMotel
  * Purpose: To implement the singleton design pattern
  */
-package designpatternsproject;
-
 import java.util.LinkedList;
 import java.util.Queue;
 

@@ -6,9 +6,6 @@
  * it notifies all registered observers.
  */
 
-package designpatternsproject;
-
-
 public interface Subject {
 
 	/* allows an observer to register with the subject */
