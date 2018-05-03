@@ -25,6 +25,12 @@ public class RoachMotel {
     
     //called when a roach colony gets a room
     void checkIn(){
-        initCapacityOfRooms--;
+        initCapacityOfRooms--;                     
+        if(initCapacityOfRooms == 0)                //if no more rooms avaiable, turn No Vacancy Sign on
+            noVacancySign = true;
+    }
+    
+    void checkOut(){
+        initCapacityOfRooms++;
     }
 }
