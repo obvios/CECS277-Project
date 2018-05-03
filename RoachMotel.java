@@ -11,6 +11,7 @@ package designpatternsproject;
 public class RoachMotel {
     private static RoachMotel uniqueInstance;
     private int initCapacityOfRooms = 50;           //number of rooms the motel has initially available.
+    private boolean noVacancySign = false;             //true when there are no vacant rooms
     //private constructor
     private RoachMotel(){};
     
