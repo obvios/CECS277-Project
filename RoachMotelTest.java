@@ -9,5 +9,7 @@
  * @author Justi
  */
 public class RoachMotelTest {
-    
+    public static void main(String[] args){
+        
+    }
 }
