@@ -11,5 +11,5 @@ public interface Observer {
 	 * changes. 
 	 * @param newState - the new state of the subject
 	 */
-	public void update(Object newState);
+	public void update(boolean roomAvailable);
 }
