@@ -58,7 +58,8 @@ public class RoachMotel implements Subject {
 	/* removes an observer */	
 	public void removeObserver( Observer o ){
         rooms.add(waitlist.poll());
-        System.out.println("Roach colony leaving waitlist and entering hotel.");
+	checkIn();
+        System.out.println("Roach colony leaving waitlist.");
         
     }
 
