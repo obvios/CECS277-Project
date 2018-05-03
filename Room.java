@@ -1,3 +1,4 @@
+package designpatternsproject;
 
 public abstract class Room {
 	protected String description;

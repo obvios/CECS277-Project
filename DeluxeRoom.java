@@ -1,3 +1,4 @@
+package designpatternsproject;
 
 public class DeluxeRoom extends Room{
 	public static final double COST = 75.00;
