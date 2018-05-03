@@ -12,5 +12,4 @@ public interface Observer {
 	 * @param newState - the new state of the subject
 	 */
 	public void update(Object newState);
-	//test
 }
