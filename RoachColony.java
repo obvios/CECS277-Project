@@ -1,4 +1,4 @@
-/*
+/* test comment
  * Class Name: RoachColony
  */
 package designpatternsproject;
