@@ -8,7 +8,7 @@
 
 package designpatternsproject;
 
-
+//
 public interface Observer {
 	/**
 	 * This method is called when the state of the subject
