@@ -4,9 +4,20 @@ It is in charge of creating the different kinds of rooms
 */
 package designpatternsproject;
 
-public abstract class HotelRoom extends Room {
+public class HotelRoom extends HotelRoomFactory {
 	
 		 
 	//returns a room
-	public abstract Room getRoom(String type);
+	public Room getRoom(String type){
+            if(type.equals("Deluxe")){
+                return new DeluxeRoom();
+            }
+            else if (type.equals("Suite")){
+                return new Suite();
+            }
+            else if (type.equals("Regular")){
+                return new RegularRoom();
+            }
+            else return null;
+        }
 }
