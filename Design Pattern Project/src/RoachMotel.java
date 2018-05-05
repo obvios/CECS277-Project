@@ -5,10 +5,7 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-/**
- *
- * @author ericpalma
- */
+
 public class RoachMotel implements Subject {
     private static RoachMotel uniqueInstance;
     private static int initCapacityOfRooms = 50;           //number of rooms the motel has initially available.
@@ -43,7 +40,8 @@ public class RoachMotel implements Subject {
     void checkOut(){
         if(initCapacityOfRooms != 50){              //cant add more rooms than motel capacity
             initCapacityOfRooms++;
-            noVacancySign = false;
+            noVacancySign = false;                  //turn vacancy sign off
+            notifyObservers();                      //notify observers that a room is open
         }  
     }
     
@@ -63,7 +61,8 @@ public class RoachMotel implements Subject {
 
 	/* notifes all registered observers when its state changes */	
 	public void notifyObservers(){
-        for (Observer roachColony : observers)
+            for (Observer roachColony : observers){
 		roachColony.update(noVacancySign);
-    }
+            }
+        }
 }
