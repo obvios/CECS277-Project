@@ -12,6 +12,6 @@ public class Spa extends Amnemities{
         }
 	
 	public double cost() {
-		return COST;
+		return roomType.cost() + COST;
 	}
 }
