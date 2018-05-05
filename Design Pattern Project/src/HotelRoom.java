@@ -1,6 +1,6 @@
 package designpatternsproject;
 
-public abstract class HotelRoom {
+public abstract class HotelRoom extends Room {
 	public Room orderCone(String type) {
 		Room room;
 		//String desc;
