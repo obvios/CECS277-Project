@@ -1,6 +1,7 @@
 /*
  * Class Name: RoachMotel
- * Purpose: To implement the singleton design pattern
+ * Purpose: To implement the singleton design pattern.
+ * This class is also in charge of spraying rooms with insecticide.
  */
 import java.util.LinkedList;
 import java.util.Queue;
