@@ -24,4 +24,9 @@ public class RoachColony implements Observer{
         public void throwParty(){
             this.initialPopulation +=  (initialPopulation * growthRate);               //increase popluation by growthRate
         }
+        
+        //this method is called when the roach colony is sprayed with insecticide
+        public void reduceColonyPopulation(int amnt){
+            this.initialPopulation -= amnt;
+        }
 }
