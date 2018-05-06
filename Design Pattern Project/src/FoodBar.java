@@ -1,4 +1,4 @@
-public class FoodBar extends Amnemities{
+public class FoodBar extends HotelDecorator{
         protected Room roomType;
 	public static final double COST = 10.00;
 	
