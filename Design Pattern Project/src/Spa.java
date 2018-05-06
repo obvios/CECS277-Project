@@ -1,4 +1,4 @@
-public class Spa extends Amnemities{
+public class Spa extends HotelDecorator{
         protected Room roomType;
 	public static final double COST = 20.00;
 	
