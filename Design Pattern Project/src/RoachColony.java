@@ -29,4 +29,8 @@ public class RoachColony implements Observer{
         public void reduceColonyPopulation(double percent){
             this.initialPopulation -= (initialPopulation * percent);
         }
+        
+        public void getPopulation(){
+            return initialPopulation;
+        }
 }
