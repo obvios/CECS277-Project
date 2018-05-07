@@ -3,7 +3,7 @@ public class FoodBar extends HotelDecorator{
 	public static final double COST = 10.00;
 	
 	public FoodBar(Room theRoom) {
-		this.roomType = theRoom;
+		roomType = theRoom;
 	}
 	
         @Override
