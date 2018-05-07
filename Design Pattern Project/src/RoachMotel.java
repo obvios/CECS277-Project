@@ -1,21 +1,21 @@
 /*
  * Class Name: RoachMotel
- * Purpose: To implement the singleton design pattern.
- * This class is also in charge of spraying rooms with insecticide.
+ * Purpose: To implement the singleton design pattern
  */
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
 
 public class RoachMotel implements Subject {
     private static RoachMotel uniqueInstance;
-    private static int initCapacityOfRooms = 50;           //number of rooms the motel has initially available.
+    private static int initCapacityOfRooms = 5;           //number of rooms the motel has initially available.
     private boolean noVacancySign;             //true when there are no vacant rooms
     
     private Queue<Observer> waitlist;
-    private LinkedList<RoachColony> rooms;
-    private ArrayList<RoachColony> colonies;        //added
-    private ArrayList<Room> theRooms;               //added
+
+    private ArrayList<RoachColony> rooms;
+
 	
     //associates a colony with a room
     public static void add(RoachColony theColony, Room theRoom){       //added
@@ -34,7 +34,7 @@ public class RoachMotel implements Subject {
     //private constructor
     private RoachMotel(){
         waitlist = new LinkedList<>();
-	rooms = new LinkedList<RoachColony>();
+	rooms = new ArrayList<>();
         noVacancySign = false;
     };
     
@@ -44,6 +44,10 @@ public class RoachMotel implements Subject {
             uniqueInstance = new RoachMotel();
         }
         return uniqueInstance;
+    }
+    
+    public RoachColony get(int index){
+        return rooms.get(index);
     }
     
     //called when a roach colony gets a room
@@ -88,7 +92,7 @@ public class RoachMotel implements Subject {
             return uniqueInstance.noVacancySign;                   //returns false if rooms available, returns true if no rooms available
         }
         
-    @Override
+        @Override
         public String toString(){
             return "Roach Motel";
         }
