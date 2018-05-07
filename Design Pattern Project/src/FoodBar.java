@@ -16,7 +16,7 @@ public class FoodBar extends HotelDecorator{
 	}
         
         @Override
-            public toString(){
+            public String toString(){
                 return "Food Bar";
             }
 }

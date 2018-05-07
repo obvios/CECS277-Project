@@ -22,7 +22,7 @@ public class HotelRoom extends HotelRoomFactory {
         }
         
     @Override
-        public toString(){
+        public String toString(){
             return "Hotel Room Factory";
         }
 }
