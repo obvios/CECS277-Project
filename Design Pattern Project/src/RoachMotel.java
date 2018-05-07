@@ -17,7 +17,7 @@ public class RoachMotel implements Subject {
 	
     //private constructor
     private RoachMotel(){
-        waitlist = new LinkedList<Observer>();
+        waitlist = new LinkedList<>();
 	rooms = new LinkedList<RoachColony>();
         noVacancySign = false;
     };
