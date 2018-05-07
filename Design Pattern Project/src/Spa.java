@@ -16,7 +16,7 @@ public class Spa extends HotelDecorator{
 	}
         
     @Override
-        public toString(){
+        public String toString(){
             return "Spa";
         }
 }
