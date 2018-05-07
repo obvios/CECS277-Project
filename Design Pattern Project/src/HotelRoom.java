@@ -6,7 +6,23 @@ package designpatternsproject;
 
 public class HotelRoom extends HotelRoomFactory {
 	
-		 
+	private RoachColonoy occupant;
+	
+	public HotelRoom()
+	{
+		occupant = null;
+	}
+	
+	public void checkIn(RoachColonoy client)
+	{
+		occupant = client;
+	}
+	
+	public void checkOut()
+	{
+		occupant = null;	
+	}
+	
 	//returns a room
 	public Room getRoom(String type){
             if(type.equals("Deluxe")){
