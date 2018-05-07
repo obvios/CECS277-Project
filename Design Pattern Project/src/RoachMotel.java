@@ -54,7 +54,7 @@ public class RoachMotel implements Subject {
 
 	/* removes an observer */	
 	public void removeObserver( Observer o ){
-        rooms.add(waitlist.poll());
+        rooms.add((RoachColony) waitlist.poll());
 	checkIn();
         System.out.println("Roach colony leaving waitlist.");
         
@@ -62,7 +62,7 @@ public class RoachMotel implements Subject {
 
 	/* notifes all registered observers when its state changes */	
 	public void notifyObservers(){
-            for (Observer roachColony : observers){
+            for (Observer roachColony : waitlist){
 		roachColony.update(noVacancySign);
             }
         }
