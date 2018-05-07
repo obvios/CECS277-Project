@@ -12,6 +12,6 @@ public class FoodBar extends HotelDecorator{
         }
         
 	public double cost() {
-		return COST;
+		return roomType.cost() + COST;
 	}
 }
