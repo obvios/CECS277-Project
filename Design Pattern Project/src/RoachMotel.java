@@ -71,4 +71,9 @@ public class RoachMotel implements Subject {
         public static boolean checkAavailability(){
             return uniqueInstance.noVacancySign;                   //returns false if rooms available, returns true if no rooms available
         }
+        
+    @Override
+        public String toString(){
+            return "Roach Motel";
+        }
 }

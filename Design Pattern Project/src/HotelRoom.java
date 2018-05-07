@@ -20,4 +20,9 @@ public class HotelRoom extends HotelRoomFactory {
             }
             else return null;
         }
+        
+    @Override
+        public toString(){
+            return "Hotel Room Factory";
+        }
 }

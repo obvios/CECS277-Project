@@ -17,4 +17,9 @@ public class SprayResistantShower extends HotelDecorator{
     public double cost(){
         return COST;
     }
+    
+    @Override 
+        public String toString(){
+            return "Spray Resistant Shower";
+        }
 }

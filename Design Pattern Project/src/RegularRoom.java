@@ -11,4 +11,9 @@ public class RegularRoom extends Room{
     public double cost() {
         return COST;
     }
+    
+    @Override
+        public toString(){
+            return "Regular Room";
+        }
 }

@@ -14,4 +14,9 @@ public class Spa extends HotelDecorator{
 	public double cost() {
 		return roomType.cost() + COST;
 	}
+        
+    @Override
+        public toString(){
+            return "Spa";
+        }
 }

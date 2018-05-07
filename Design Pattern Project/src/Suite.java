@@ -11,4 +11,9 @@ public class Suite extends Room{
     public double cost() {
         return COST;
     }
+    
+    @Override
+        public String toString(){
+            return "Suite";
+        }
 }

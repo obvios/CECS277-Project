@@ -33,4 +33,8 @@ public class RoachColony implements Observer{
         public void getPopulation(){
             return initialPopulation;
         }
+        
+        public String toString(){
+            return colonyName;
+        }
 }
