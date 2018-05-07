@@ -35,6 +35,7 @@ public class RoachColony implements Observer{
         }
         
         public String toString(){
-            return colonyName;
+            String i = "Colony Name: " + colonyName + " Poplulation " + initialPopulation;
+            return i;
         }
 }
