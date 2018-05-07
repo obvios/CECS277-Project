@@ -23,6 +23,11 @@ public class HotelRoom extends HotelRoomFactory {
 		occupant = null;	
 	}
 	
+	public boolean occupied()
+	{
+		return occupant != null;	
+	}
+	
 	//returns a room
 	public Room getRoom(String type){
             if(type.equals("Deluxe")){
