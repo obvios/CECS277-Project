@@ -68,7 +68,7 @@ public class RoachMotel implements Subject {
         }
         
         /*checkAvailability*/
-        public boolean checkAavailability(){
+        public static boolean checkAavailability(){
             return uniqueInstance.noVacancySign;                   //returns false if rooms available, returns true if no rooms available
         }
 }
