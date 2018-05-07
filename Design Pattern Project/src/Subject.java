@@ -12,7 +12,7 @@ public interface Subject {
 	public void addObserver( Observer o );
 
 	/* removes an observer */	
-	public void removeObserver( Observer o );
+	public void removeObserver();
 
 	/* notifes all registered observers when its state changes */	
 	public void notifyObservers();
