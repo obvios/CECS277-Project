@@ -6,7 +6,7 @@ public class SprayResistantShower extends HotelDecorator{
     public static final double COST = 25.00;
     
     public SprayResistantShower(Room theRoom){
-        this.roomType = theRoom;
+        roomType = theRoom;
     }
     
     @Override
@@ -15,7 +15,7 @@ public class SprayResistantShower extends HotelDecorator{
     }
     
     public double cost(){
-        return COST;
+        return roomType.cost() + COST;
     }
     
     @Override 
