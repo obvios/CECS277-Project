@@ -14,7 +14,23 @@ public class RoachMotel implements Subject {
     
     private Queue<Observer> waitlist;
     private LinkedList<RoachColony> rooms;
+    private ArrayList<RoachColony> colonies;        //added
+    private ArrayList<Room> theRooms;               //added
 	
+    //associates a colony with a room
+    public static void add(RoachColony theColony, Room theRoom){       //added
+        colonies.add(theColony);
+        theRooms.add(theRoom);
+    }
+    
+    public double calculateTotalCost(){                         //added
+        double total = colonies.get(0).getNights() * theRooms.get(0).getCost();
+        colonies.remove(0);
+        theRooms.remove(0);
+        checkOut();
+        return total;
+    }
+    
     //private constructor
     private RoachMotel(){
         waitlist = new LinkedList<>();
