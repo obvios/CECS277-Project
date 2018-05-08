@@ -13,17 +13,16 @@ import java.util.Queue;
 
 public class RoachMotel implements Subject {
 
-    private static RoachMotel uniqueInstance;
-    private static int initCapacityOfRooms = 5;           //number of rooms the motel has initially available.
-    private boolean noVacancySign;             //true when there are no vacant rooms
+    private static RoachMotel uniqueInstance; //single instance of roach motel
+    private static int initCapacityOfRooms = 5; //number of rooms the motel has initially available.
+    private boolean noVacancySign; //true when there are no vacant rooms
+    private Queue<Observer> waitlist; //waitlist for open rooms
 
-    private Queue<Observer> waitlist;
-
-//    private ArrayList<RoachColony> rooms;
-//    private ArrayList<RoachColony>colonies;
+    //private ArrayList<RoachColony> rooms;
+    //private ArrayList<RoachColony>colonies;
     private ArrayList<Room> theRooms;
 
-    //private constructor
+    /* private constructor */
     private RoachMotel() {
         waitlist = new LinkedList<>();
         theRooms = new ArrayList<>();
@@ -32,7 +31,7 @@ public class RoachMotel implements Subject {
 
     ;
     
-    //returns this one and only instance of RoachMotel
+    /* returns this one and only instance of RoachMotel */
     public synchronized static RoachMotel getInstance() {
         if (uniqueInstance == null) {
             uniqueInstance = new RoachMotel();
@@ -40,6 +39,7 @@ public class RoachMotel implements Subject {
         return uniqueInstance;
     }
 
+    /* is room is empty, checks in colony */
     public void add(Room theRoom) {       //added
 //        colonies.add(theColony);
         if (!noVacancySign) {
@@ -58,11 +58,12 @@ public class RoachMotel implements Subject {
 //        checkOut();
 //        return total;
 //    }
+    
     public Room get(int index) {
         return theRooms.get(index);
     }
 
-    //called when a roach colony gets a room
+    /* called when a roach colony gets a room */
     void checkIn() {
         initCapacityOfRooms--;
         if (initCapacityOfRooms == 0) //if no more rooms avaiable, turn No Vacancy Sign on
@@ -71,17 +72,17 @@ public class RoachMotel implements Subject {
         }
     }
 
-    //called when a roach colony checks out of a room
+    /* called when a roach colony checks out of a room */
     void checkOut(int roomNumber) {
         Room tempRoom = theRooms.get(roomNumber - 1);
         System.out.println(tempRoom.getColony().toString() + " is checking out, they had: " + tempRoom.getDescription());
         System.out.println("Their total is: $" + tempRoom.cost());
         theRooms.remove(roomNumber - 1);
-        if (initCapacityOfRooms != 5) {              //cant add more rooms than motel capacity
+        if (initCapacityOfRooms != 5) {
             initCapacityOfRooms++;
-            noVacancySign = false;                  //turn vacancy sign off
-            notifyObservers();                      //notify observers that a room is open
-        }
+            noVacancySign = false; //turn vacancy sign off
+            notifyObservers(); //notify observers that a room is open
+        } //cant add more rooms than motel capacity
     }
 
     /* allows an observer to register with the subject */
@@ -93,8 +94,8 @@ public class RoachMotel implements Subject {
 
     /* removes an observer */
     public void removeObserver() {
-//        rooms.add((RoachColony) waitlist.poll());
-        waitlist.remove((RoachColony) waitlist.poll());
+    	//rooms.add((RoachColony) waitlist.poll());
+    	waitlist.remove((RoachColony) waitlist.poll());
         checkIn();
         System.out.println("Roach colony leaving waitlist.");
 
@@ -107,19 +108,19 @@ public class RoachMotel implements Subject {
         }
     }
 
-    /*checkAvailability*/
+    /* checks room availability */
     public static boolean checkAavailability() {
-        return uniqueInstance.noVacancySign;                   //returns false if rooms available, returns true if no rooms available
+        return uniqueInstance.noVacancySign; //returns false if rooms available, returns true if no rooms available
     }
 
-    //throw party for each colony
+    /* throw party for each colony */
     public void throwParties(){
         for(Room theRoom : theRooms){
            theRoom.getColony().throwParty();
         }
     }
     
-    //sprays all the rooms with insecticide
+    /* sprays all the rooms with insecticide */
     public void sprayParties(){
         for(Room theRoom : theRooms){
            theRoom.getColony().reduceColonyPopulation();
