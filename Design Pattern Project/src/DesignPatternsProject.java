@@ -54,6 +54,7 @@ public class DesignPatternsProject {
         /*throw parties*/
         System.out.println("\nColonies are throwing parties...");
         Motel.throwParties();
+        
         /*spray parties*/
         System.out.println("\nAfter spraying parties...");
         Motel.sprayParties();
