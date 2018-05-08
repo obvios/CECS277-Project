@@ -32,6 +32,16 @@ public abstract class Room {
 	 // returns the cost of the room
 	 public abstract double cost();
          
+         //adds a colony to the room
+    public void addColony(RoachColony colony){
+        this.theColony = colony;
+    }
+    
+    //returns the colony
+    public RoachColony getColony(){
+        return theColony;
+    }
+         
         @Override
          public String toString(){
              return description + " " + cost();
