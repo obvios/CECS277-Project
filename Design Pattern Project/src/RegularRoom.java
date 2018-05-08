@@ -8,23 +8,32 @@
  */
 
 public class RegularRoom extends Room{
-	public static final double COST = 50.00;
-        private RoachColony theColony;
+	
+	public static final double COST = 50.00; //base rate of room per night
+    private RoachColony theColony; //room occupant
+    
+    /* room contructor */
     public RegularRoom() {
         description = "Regular Room";
     }
    
+    /* returns cost per night */
     public double cost() {
         return COST;
     }
     
-    //adds a colony to the room
+    /* adds a colony to the room */
     public void addColony(RoachColony colony){
         this.theColony = colony;
     }
     
-    //returns the colony
+    /* returns the colony */
     public RoachColony getColony(){
         return theColony;
+    }
+    
+    @Override
+    public String toString() {
+        return "Regular";
     }
 }

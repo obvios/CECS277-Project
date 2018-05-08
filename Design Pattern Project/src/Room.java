@@ -9,19 +9,20 @@
 
 public abstract class Room {
 
-    protected String description;
+    protected String description; //room description
 
-    // returns the description of the room
+    /* returns the description of the room */
     public String getDescription() {
         return description;
     }
 
-    // returns the cost of the room
+    /* returns the cost of the room */
     public abstract double cost();
 
+    /* adds colony to the room */
     public abstract void addColony(RoachColony colony);
 
-    //returns the colony
+    /* returns the colony */
     public abstract RoachColony getColony();
 
     @Override

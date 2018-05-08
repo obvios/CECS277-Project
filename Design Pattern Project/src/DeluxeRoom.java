@@ -9,21 +9,25 @@
 
 public class DeluxeRoom extends Room {
 
-    public static final double COST = 75.00;
-    private RoachColony theColony;
-
+    public static final double COST = 75.00; //base rate of room per night
+    private RoachColony theColony; //room occupant
+    
+    /* room contructor */
     public DeluxeRoom() {
         description = "Deluxe Room";
     }
 
+    /* returns cost per night */
     public double cost() {
         return COST;
     }
 
+    /* adds a colony to the room */
     public void addColony(RoachColony theColony) {
         this.theColony = theColony;
     }
 
+    /* returns the colony */
     public RoachColony getColony() {
         return theColony;
     }
