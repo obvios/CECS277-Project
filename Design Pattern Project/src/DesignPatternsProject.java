@@ -1,24 +1,21 @@
 
 import java.util.ArrayList;
 
-/*  eyyyyyyyyyyy
- * Programmers: Eric Palma, Justin Do, Juan, Jeffrey
- * Class Name: Main
- * Input: 
- * Output:
+/* 
+ * Programmers: Eric Palma, Justin Do, Juan Pasillas, Jeffrey
+ * Date: May 8, 2018
+ * Class Name: DesignPatternsProject.java
+ * Purpose: Tests combination of other classes/design pattern in main.
+ * Input: Roach colony starting population and growth rate.
+ * Output: Roach colony population and checkout costs.
  */
-/**
- *
- * @author ericpalma
- */
+
 public class DesignPatternsProject {
 
-    /**
-     * @param args the command line arguments
-     */
     public static void main(String[] args) {
         RoachMotel Motel = RoachMotel.getInstance();
         HotelRoomFactory factory = new HotelRoom();
+        
         /*create rooms*/
         Room room1 = new FoodBar(new Spa(factory.getRoom("Deluxe")));
         Room room2 = new SprayResistantShower(factory.getRoom("Suite"));
@@ -27,6 +24,7 @@ public class DesignPatternsProject {
         Room room5 = factory.getRoom("Suite");
         Room room6 = factory.getRoom("Deluxe");
         Room room7 = new Spa(factory.getRoom("Deluxe"));
+        
         /*create colonies*/
         RoachColony colony1 = new RoachColony("colony 1", .10, 100);
         RoachColony colony2 = new RoachColony("colony 2", .20, 100);
