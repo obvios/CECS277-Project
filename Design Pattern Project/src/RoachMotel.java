@@ -14,36 +14,15 @@ public class RoachMotel implements Subject {
     
     private Queue<Observer> waitlist;
 
-    private ArrayList<RoachColony> rooms;
-    private ArrayList<RoachColony>colonies;
+//    private ArrayList<RoachColony> rooms;
+//    private ArrayList<RoachColony>colonies;
     private ArrayList<Room>theRooms;
-
 	
-    //associates a colony with a room
-    public static void add(RoachColony theColony, Room theRoom){       //added
-        colonies.add(theColony);
-        theRooms.add(theRoom);
-    }
-    
-    public double calculateTotalCost(){                         //added
-        double total = colonies.get(0).getNights() * theRooms.get(0).getCost();
-        colonies.remove(0);
-        theRooms.remove(0);
-        checkOut();
-        return total;
-    }
-    
     //private constructor
     private RoachMotel(){
         waitlist = new LinkedList<>();
-	rooms = new ArrayList<>();
+	theRooms = new ArrayList<>();
         noVacancySign = false;
-	    
-	//initializing empty rooms
-	for(int i = 0; i < initCapacityOfRooms; i++)
-	{
-		rooms.add(new HotelRoom());	
-	}
     };
     
     //returns this one and only instance of RoachMotel
@@ -54,8 +33,22 @@ public class RoachMotel implements Subject {
         return uniqueInstance;
     }
     
-    public HotelRoom get(int index){
-        return rooms.get(index);
+    public void add(Room theRoom){       //added
+//        colonies.add(theColony);
+        theRooms.add(theRoom);
+    }
+    
+//    public double calculateTotalCost(){                         //added
+//        double total = colonies.get(0).getNights() * theRooms.get(0).getCost();
+//        colonies.remove(0);
+//        theRooms.remove(0);
+//        checkOut();
+//        return total;
+//    }
+    
+    
+    public Room get(int index){
+        return theRooms.get(index);
     }
     
     //called when a roach colony gets a room
@@ -82,21 +75,17 @@ public class RoachMotel implements Subject {
 
 	/* removes an observer */	
 	public void removeObserver(){
-		for(int i = 0; i < rooms.size(); i++)
-		{
-			if(!rooms.get(i).occupied)
-			{
-				rooms.get(i).checkIn(waitlist.poll());
-			}
-		checkIn();
-        	System.out.println("Roach colony leaving waitlist and checking in to hotel room.");
+//        rooms.add((RoachColony) waitlist.poll());
+            waitlist.remove((RoachColony)waitlist.poll());
+	checkIn();
+        System.out.println("Roach colony leaving waitlist.");
         
-    	}
+    }
 
 	/* notifes all registered observers when its state changes */	
 	public void notifyObservers(){
             for (Observer roachColony : waitlist){
-		roachColony.update(uniqueInstance.noVacancySign);
+		roachColony.update(noVacancySign);
             }
         }
         
@@ -104,11 +93,12 @@ public class RoachMotel implements Subject {
         public static boolean checkAavailability(){
             return uniqueInstance.noVacancySign;                   //returns false if rooms available, returns true if no rooms available
         }
-
+        
         //this method makes all colonies throw parties
-        public static void throwParties(){
+        public void throwParties(){
             for(RoachColony colony: colonies){
                 colony.throwParty();
+                System.out.println("Party Thrown!");
             }
         }
         
