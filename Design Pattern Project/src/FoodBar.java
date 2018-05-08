@@ -9,9 +9,10 @@
 
 public class FoodBar extends HotelDecorator {
 
-    protected Room roomType;
-    public static final double COST = 10.00;
+    protected Room roomType; //room type
+    public static final double COST = 10.00; //cost of extra per night
 
+    /* Instantiates extra's room type */
     public FoodBar(Room theRoom) {
         this.roomType = theRoom;
     }
@@ -21,22 +22,25 @@ public class FoodBar extends HotelDecorator {
         return roomType.getDescription() + " with a Food Bar";
     }
 
+    /* returns added cost per night */
     public double cost() {
         return roomType.cost() + COST;
     }
 
     @Override
-    public String toString() {
-        return "Food Bar";
-    }
-
-    @Override
+    /* adds colony to room */
     public void addColony(RoachColony colony) {
         roomType.addColony(colony);
     }
 
     @Override
+    /* returns colony in room */
     public RoachColony getColony() {
         return roomType.getColony();
+    }
+    
+    @Override
+    public String toString() {
+        return "Food Bar";
     }
 }

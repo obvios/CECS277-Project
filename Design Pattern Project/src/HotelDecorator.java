@@ -9,6 +9,6 @@
 
 public abstract class HotelDecorator extends Room{
 	
-	/* gets room description */
+	/* gets room description (type + amnemities) */
 	public abstract String getDescription();
 }
