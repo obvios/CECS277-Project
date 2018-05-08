@@ -1,5 +1,10 @@
-/*
-This class creates a Suite room
+/* 
+ * Programmers: Eric Palma, Justin Do, Juan Pasillas, Jeffrey
+ * Date: May 8, 2018
+ * Class Name: Suite.java
+ * Purpose: Creates a suite room.
+ * Input: N/A.
+ * Output: N/A.
  */
 
 public class Suite extends Room {

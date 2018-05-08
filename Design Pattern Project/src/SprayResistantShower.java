@@ -1,6 +1,12 @@
-/*
-This is an amnenitie that decorates a hotel room.
+/* 
+ * Programmers: Eric Palma, Justin Do, Juan Pasillas, Jeffrey
+ * Date: May 8, 2018
+ * Class Name: SprayResistantShower.java
+ * Purpose: Adds a spray resistant shower to a room.
+ * Input: N/A.
+ * Output: N/A.
  */
+
 public class SprayResistantShower extends HotelDecorator {
 
     protected Room roomType;

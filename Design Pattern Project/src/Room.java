@@ -1,3 +1,11 @@
+/* 
+ * Programmers: Eric Palma, Justin Do, Juan Pasillas, Jeffrey
+ * Date: May 8, 2018
+ * Class Name: Room.java
+ * Purpose: Model for creating a motel room.
+ * Input: N/A.
+ * Output: N/A.
+ */
 
 public abstract class Room {
 

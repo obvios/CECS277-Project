@@ -1,5 +1,10 @@
-/*
-This class creates a Deluxe Room
+/* 
+ * Programmers: Eric Palma, Justin Do, Juan Pasillas, Jeffrey
+ * Date: May 8, 2018
+ * Class Name: DeluxeRoom.java
+ * Purpose: Creates a deluxe room.
+ * Input: N/A.
+ * Output: N/A.
  */
 
 public class DeluxeRoom extends Room {

@@ -1,9 +1,10 @@
-/**
- * Subject.java
- *
- * Objects implementing this interface allow observers
- * to register with it. When this object changes state,
- * it notifies all registered observers.
+/* 
+ * Programmers: Eric Palma, Justin Do, Juan Pasillas, Jeffrey
+ * Date: May 8, 2018
+ * Class Name: Subject.java
+ * Purpose: Registers and notifies observers.
+ * Input: N/A.
+ * Output: N/A.
  */
 
 public interface Subject {

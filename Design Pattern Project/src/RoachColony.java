@@ -1,5 +1,10 @@
-/* test comment
- * Class Name: RoachColony
+/* 
+ * Programmers: Eric Palma, Justin Do, Juan Pasillas, Jeffrey
+ * Date: May 8, 2018
+ * Class Name: RoachColony.java
+ * Purpose: Creates a roach colony.
+ * Input: N/A.
+ * Output: N/A.
  */
 
 public class RoachColony implements Observer {

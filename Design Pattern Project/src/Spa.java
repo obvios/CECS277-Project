@@ -1,3 +1,11 @@
+/* 
+ * Programmers: Eric Palma, Justin Do, Juan Pasillas, Jeffrey
+ * Date: May 8, 2018
+ * Class Name: Spa.java
+ * Purpose: Adds a spa to a room.
+ * Input: N/A.
+ * Output: N/A.
+ */
 
 public class Spa extends HotelDecorator {
 

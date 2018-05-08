@@ -1,3 +1,11 @@
+/* 
+ * Programmers: Eric Palma, Justin Do, Juan Pasillas, Jeffrey
+ * Date: May 8, 2018
+ * Class Name: FoodBar.java
+ * Purpose: Adds a food bar to the room.
+ * Input: N/A.
+ * Output: N/A.
+ */
 
 public class FoodBar extends HotelDecorator {
 

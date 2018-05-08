@@ -1,7 +1,12 @@
-/*
- * Class Name: RoachMotel
- * Purpose: To implement the singleton design pattern
+/* 
+ * Programmers: Eric Palma, Justin Do, Juan Pasillas, Jeffrey
+ * Date: May 8, 2018
+ * Class Name: RoachMotel.java
+ * Purpose: Creates a roach motel.
+ * Input: N/A.
+ * Output: N/A.
  */
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;

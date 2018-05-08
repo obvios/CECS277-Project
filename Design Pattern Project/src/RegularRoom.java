@@ -1,6 +1,11 @@
-/*
-This class creates a Regular Room
-*/
+/* 
+ * Programmers: Eric Palma, Justin Do, Juan Pasillas, Jeffrey
+ * Date: May 8, 2018
+ * Class Name: RegularRoom.java
+ * Purpose: Creates a regular room.
+ * Input: N/A.
+ * Output: N/A.
+ */
 
 public class RegularRoom extends Room{
 	public static final double COST = 50.00;

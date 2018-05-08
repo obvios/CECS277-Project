@@ -1,9 +1,10 @@
-/**
- * Observer.java
- *
- * Observers implement this interface so that
- * their update() method is called by the subject
- * when the state of the subject changes.
+/* 
+ * Programmers: Eric Palma, Justin Do, Juan Pasillas, Jeffrey
+ * Date: May 8, 2018
+ * Class Name: Observer.java
+ * Purpose: Interface to update subjects on room status.
+ * Input: N/A.
+ * Output: N/A.
  */
 
 public interface Observer {

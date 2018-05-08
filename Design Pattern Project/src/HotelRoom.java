@@ -1,11 +1,15 @@
-/*
-This class is the hotel room factory.
-It is in charge of creating the different kinds of rooms
+/* 
+ * Programmers: Eric Palma, Justin Do, Juan Pasillas, Jeffrey
+ * Date: May 8, 2018
+ * Class Name: HotelRoom.java
+ * Purpose: Creates the different types of rooms.
+ * Input: N/A.
+ * Output: N/A.
  */
 
 public class HotelRoom extends HotelRoomFactory {
 
-    //returns a room
+    /* returns a room */
     public Room getRoom(String type) {
         if (type.equals("Deluxe")) {
             return new DeluxeRoom();

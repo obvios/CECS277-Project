@@ -1,6 +1,3 @@
-
-import java.util.ArrayList;
-
 /* 
  * Programmers: Eric Palma, Justin Do, Juan Pasillas, Jeffrey
  * Date: May 8, 2018
@@ -9,6 +6,8 @@ import java.util.ArrayList;
  * Input: Roach colony starting population and growth rate.
  * Output: Roach colony population and checkout costs.
  */
+
+import java.util.ArrayList;
 
 public class DesignPatternsProject {
 
