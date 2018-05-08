@@ -1,6 +1,28 @@
 
 public abstract class Room {
 	protected String description;
+	
+	private RoachColonoy occupant;
+	
+	public HotelRoom()
+	{
+		occupant = null;
+	}
+	
+	public void checkIn(RoachColonoy client)
+	{
+		occupant = client;
+	}
+	
+	public void checkOut()
+	{
+		occupant = null;	
+	}
+	
+	public boolean occupied()
+	{
+		return occupant != null;	
+	}
 
 	 // returns the description of the room
 	 public String getDescription() {
