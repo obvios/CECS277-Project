@@ -9,14 +9,20 @@
 
 public class HotelRoom extends HotelRoomFactory {
 
-    /* gets a room type */
-    public Room getRoom(String type) {
+    //returns a room
+    public Room getRoom(String type,boolean shower) {
         if (type.equals("Deluxe")) {
-            return new DeluxeRoom();
+            Room theRoom = new DeluxeRoom();
+            if(shower == true) theRoom.toggleShower();
+            return theRoom;
         } else if (type.equals("Suite")) {
-            return new Suite();
+            Room theRoom = new Suite();
+            if(shower == true) theRoom.toggleShower();
+            return theRoom;
         } else if (type.equals("Regular")) {
-            return new RegularRoom();
+            Room theRoom = new RegularRoom();
+            if(shower == true) theRoom.toggleShower();
+            return theRoom;
         } else {
             return null;
         }
