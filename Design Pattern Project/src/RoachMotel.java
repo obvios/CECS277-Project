@@ -15,6 +15,8 @@ public class RoachMotel implements Subject {
     private Queue<Observer> waitlist;
 
     private ArrayList<RoachColony> rooms;
+    private ArrayList<RoachColony>colonies;
+    private ArrayList<Room>theRooms;
 
 	
     //associates a colony with a room
@@ -101,6 +103,13 @@ public class RoachMotel implements Subject {
         /*checkAvailability*/
         public static boolean checkAavailability(){
             return uniqueInstance.noVacancySign;                   //returns false if rooms available, returns true if no rooms available
+        }
+
+        //this method makes all colonies throw parties
+        public static void throwParties(){
+            for(RoachColony colony: colonies){
+                colony.throwParty();
+            }
         }
         
         @Override
