@@ -68,6 +68,9 @@ public class RoachMotel implements Subject {
 
     //called when a roach colony checks out of a room
     void checkOut(int roomNumber) {
+        Room tempRoom = theRooms.get(roomNumber - 1);
+        System.out.println(tempRoom.getColony().toString() + " is checking out, they had: " + tempRoom.getDescription());
+        System.out.println("Their total is: $" + tempRoom.cost());
         theRooms.remove(roomNumber - 1);
         if (initCapacityOfRooms != 5) {              //cant add more rooms than motel capacity
             initCapacityOfRooms++;
@@ -79,7 +82,8 @@ public class RoachMotel implements Subject {
     /* allows an observer to register with the subject */
     public void addObserver(Observer o) {
         waitlist.add(o);
-        System.out.println("New roach colony waitlisted with position of " + waitlist.size() + ".");
+        RoachColony tempColony = (RoachColony) o;
+        System.out.println(o.toString() + " waitlisted at position " + waitlist.size() + ".");
     }
 
     /* removes an observer */
@@ -103,14 +107,20 @@ public class RoachMotel implements Subject {
         return uniqueInstance.noVacancySign;                   //returns false if rooms available, returns true if no rooms available
     }
 
-    //this method makes all colonies throw parties
-//        public void throwParties(){
-//            for(RoachColony colony: colonies){
-//                colony.throwParty();
-//                System.out.println("Party Thrown!");
-//            }
-//        }
-//        
+    //throw party for each colony
+    public void throwParties(){
+        for(Room theRoom : theRooms){
+           theRoom.getColony().throwParty();
+        }
+    }
+    
+    //sprays all the rooms with insecticide
+    public void sprayParties(){
+        for(Room theRoom : theRooms){
+           theRoom.getColony().reduceColonyPopulation();
+        }
+    }
+    
     @Override
     public String toString() {
         return "Roach Motel";

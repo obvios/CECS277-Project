@@ -25,15 +25,17 @@ public class RoachColony implements Observer {
     //when roaches throw party, the multiply by their growth factor
     public void throwParty() {
         this.initialPopulation += (initialPopulation * growthRate);               //increase popluation by growthRate
+        System.out.println("After throwing party, " + this.toString());
     }
 
     //this method is called when the roach colony is sprayed with insecticide. Reduces colony by percent
-    public void reduceColonyPopulation(double percent) {
-        this.initialPopulation -= (initialPopulation * percent);
+    public void reduceColonyPopulation() {
+        this.initialPopulation -= (initialPopulation * .50);
+        System.out.println("After getting sprayed, " + this.toString());
     }
 
     public String toString() {
-        String i = "Colony Name: " + colonyName + " Poplulation " + initialPopulation;
+        String i = colonyName + ", Poplulation " + initialPopulation;
         return i;
     }
 }
