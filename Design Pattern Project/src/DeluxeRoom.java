@@ -1,31 +1,30 @@
 /*
 This class creates a Deluxe Room
-*/
+ */
 
-public class DeluxeRoom extends Room{
+public class DeluxeRoom extends Room {
+
     public static final double COST = 75.00;
     private RoachColony theColony;
-    
+
     public DeluxeRoom() {
         description = "Deluxe Room";
     }
-   
+
     public double cost() {
         return COST;
     }
-    
-    //adds a colony to the room
-    public void addColony(RoachColony colony){
-        this.theColony = colony;
+
+    public void addColony(RoachColony theColony) {
+        this.theColony = theColony;
     }
-    
-    //returns the colony
-    public RoachColony getColony(){
+
+    public RoachColony getColony() {
         return theColony;
     }
-    
+
     @Override
-        public String toString(){
-            return "Deluxe Room";
-        }
+    public String toString() {
+        return "Deluxe Room";
+    }
 }
