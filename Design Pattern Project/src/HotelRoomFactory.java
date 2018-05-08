@@ -9,5 +9,6 @@
 
 public abstract class HotelRoomFactory{
     
+	/* gets room description */
     public abstract Room getRoom(String type);
 }

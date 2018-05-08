@@ -9,7 +9,7 @@
 
 public class HotelRoom extends HotelRoomFactory {
 
-    /* returns a room */
+    /* gets a room type */
     public Room getRoom(String type) {
         if (type.equals("Deluxe")) {
             return new DeluxeRoom();
