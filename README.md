@@ -23,3 +23,5 @@ When the roaches check out, we calculate the bill as the room rate mulitplied by
 If a RoachColony tries to check in and there are no available rooms, we add them to a waitlist.
 When a room does become vacant, we notify every colony on the list then clear out the list.
 When the colony receives the notification, the colony will display a message that the notification has been received.
+
+Practice through terminal
