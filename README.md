@@ -1,4 +1,4 @@
-# CECS277-Project
+Design Patterns Project
 Design Patterns Assignment
 For this assignment, you will be using some of the design patterns we discussed:
 Singleton
